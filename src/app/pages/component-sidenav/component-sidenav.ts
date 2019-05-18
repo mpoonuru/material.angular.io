@@ -39,9 +39,7 @@ export class ComponentSidenav implements OnInit {
 
   ngOnInit() {
     // Combine params from all of the path into a single object.
-    this.params = combineLatest(
-      this._route.pathFromRoot.map(route => route.params),
-      Object.assign);
+    this.params = this._route.params;
   }
 
 }
