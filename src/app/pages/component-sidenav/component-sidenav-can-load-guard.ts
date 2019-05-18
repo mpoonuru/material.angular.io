@@ -15,7 +15,7 @@ export class CanActivateComponentSidenav implements CanActivate {
     // items.  If found, returns true to allow activation, otherwise blocks activation and navigates
     // to '/'.
     const sectionFound = Object.keys(SECTIONS).find(
-      (val => val.toLowerCase() === route.url[0].path.toLowerCase()));
+      (val => val.toLowerCase() === route.params.section));
     if (sectionFound) { return true; }
     this.router.navigateByUrl('/');
     return false;
